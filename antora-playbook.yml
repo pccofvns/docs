@@ -1,0 +1,53 @@
+site:
+  title: Docs
+  start_page: takshashila::index.adoc
+content:
+  sources:
+    - url: ../takshashila #https://github.com/pccofvns/takshashila.git
+      branches: [main]
+      start_path: docs
+    - url: ../yoga-kshema #https://github.com/pccofvns/yoga-kshema.git
+      branches: [main]
+      start_path: docs
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+  supplemental_files:
+    - path: robots.txt
+      contents: |
+        User-agent: *
+    - path: ui.yml
+      contents: |
+        static_files: [.nojekyll, robots.txt]
+    - path: .nojekyll
+asciidoc:
+  extensions:
+    - asciidoctor-kroki
+    - ./lib/inline-man-macro.js
+    - ./lib/multirow-table-head-tree-processor.js
+    - ./lib/tabs-block.js
+  attributes:
+    experimental: ""
+    example-caption: ~
+    hide-uri-scheme: ""
+    idprefix: "@"
+    idseparator: "-@"
+    tabs: tabs
+    source-language: asciidoc
+    table-caption: ~
+    url-project: https://pccofvns.github.io
+    toc: ~
+    linkattrs: ""
+    icons: "font"
+    xrefstyle: short
+    kroki-fetch-diagram: true
+    plantuml-server-url: "http://www.plantuml.com/plantuml"
+    plantuml-fetch-diagram: true
+runtime:
+  cache_dir: ./.cache/antora
+  fetch: true
+output:
+  clean: true
+  dir: ./public
+  destinations:
+    - provider: archive
