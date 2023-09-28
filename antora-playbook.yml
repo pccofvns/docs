@@ -22,7 +22,7 @@ ui:
     - path: .nojekyll
 asciidoc:
   extensions:
-    - asciidoctor-kroki
+    # - asciidoctor-kroki
     - ./lib/inline-man-macro.js
     - ./lib/multirow-table-head-tree-processor.js
     - ./lib/tabs-block.js
