@@ -48,6 +48,5 @@ runtime:
   fetch: true
 output:
   clean: true
-  dir: ./public
-  destinations:
-    - provider: archive
+  # destinations:
+  #   - provider: archive
