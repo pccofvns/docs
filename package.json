@@ -2,13 +2,7 @@
   "name": "docs",
   "version": "1.0",
   "description": "Docs",
-  "main": "index.js",
-  "scripts": {
-    "prepare": "antora --fetch antora-playbook.yml"
-  },
-  "keywords": [],
   "author": "Prashant C Chaturvedi",
-  "license": "ISC",
   "dependencies": {
     "@antora/cli": "3.1.4",
     "@antora/site-generator": "3.1.4",

@@ -3,10 +3,10 @@ site:
   start_page: takshashila::index.adoc
 content:
   sources:
-    - url: ../takshashila #https://github.com/pccofvns/takshashila.git
+    - url: https://github.com/pccofvns/takshashila.git
       branches: [main]
       start_path: docs
-    - url: ../yoga-kshema #https://github.com/pccofvns/yoga-kshema.git
+    - url: https://github.com/pccofvns/yoga-kshema.git
       branches: [main]
       start_path: docs
 ui:
